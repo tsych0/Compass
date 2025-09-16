@@ -1,0 +1,66 @@
+{
+  "fill" : {
+    "automatic-gradient" : "extended-srgb:0.00000,0.53333,1.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "blur-material" : 0.5,
+      "layers" : [
+        {
+          "blend-mode" : "darken",
+          "fill" : {
+            "linear-gradient" : [
+              "srgb:1.00000,0.57637,0.00000,1.00000",
+              "srgb:0.83742,0.83744,0.83743,1.00000"
+            ]
+          },
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "Gold Medal Icon (1).svg",
+          "name" : "Gold Medal Icon (1)",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              -14.396842172335365,
+              -72.14843339596192
+            ]
+          }
+        },
+        {
+          "blend-mode" : "soft-light",
+          "fill" : {
+            "linear-gradient" : [
+              "srgb:0.83742,0.83744,0.83743,1.00000",
+              "srgb:1.00000,0.57811,0.00000,1.00000"
+            ]
+          },
+          "glass" : true,
+          "image-name" : "Compass Tools Utensils Icon.svg",
+          "name" : "Compass Tools Utensils Icon",
+          "position" : {
+            "scale" : 0.75,
+            "translation-in-points" : [
+              -1.109375,
+              82.515625
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
