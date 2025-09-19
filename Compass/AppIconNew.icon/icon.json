@@ -4,20 +4,16 @@
   },
   "groups" : [
     {
-      "blur-material" : 0.5,
       "layers" : [
         {
           "blend-mode" : "darken",
           "fill" : {
-            "linear-gradient" : [
-              "srgb:1.00000,0.57637,0.00000,1.00000",
-              "srgb:0.83742,0.83744,0.83743,1.00000"
-            ]
+            "automatic-gradient" : "srgb:1.00000,1.00000,1.00000,1.00000"
           },
           "glass" : true,
           "hidden" : false,
-          "image-name" : "Gold Medal Icon (1).svg",
-          "name" : "Gold Medal Icon (1)",
+          "image-name" : "Gold Medal Icon.svg",
+          "name" : "Gold Medal Icon",
           "position" : {
             "scale" : 1,
             "translation-in-points" : [
@@ -25,18 +21,38 @@
               -72.14843339596192
             ]
           }
-        },
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "blur-material" : 0.5,
+      "layers" : [
         {
-          "blend-mode" : "soft-light",
-          "fill" : {
-            "linear-gradient" : [
-              "srgb:0.83742,0.83744,0.83743,1.00000",
-              "srgb:1.00000,0.57811,0.00000,1.00000"
-            ]
-          },
+          "blend-mode" : "multiply",
+          "fill-specializations" : [
+            {
+              "value" : "automatic"
+            },
+            {
+              "appearance" : "dark",
+              "value" : {
+                "automatic-gradient" : "srgb:0.45086,0.98830,0.83763,1.00000"
+              }
+            }
+          ],
           "glass" : true,
+          "hidden" : false,
           "image-name" : "Compass Tools Utensils Icon.svg",
           "name" : "Compass Tools Utensils Icon",
+          "opacity" : 1,
           "position" : {
             "scale" : 0.75,
             "translation-in-points" : [
