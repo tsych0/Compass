@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67AD8CA42E7DA33C00332EF0 /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = 67AD8CA32E7DA33C00332EF0 /* Vapor */; };
 		67D8CCB22E7AB0E30086FD05 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 67D8CCB12E7AB0E30086FD05 /* Algorithms */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67D8CCB22E7AB0E30086FD05 /* Algorithms in Frameworks */,
+				67AD8CA42E7DA33C00332EF0 /* Vapor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,7 @@
 			name = Compass;
 			packageProductDependencies = (
 				67D8CCB12E7AB0E30086FD05 /* Algorithms */,
+				67AD8CA32E7DA33C00332EF0 /* Vapor */,
 			);
 			productName = Compass;
 			productReference = 6751032E2E79EBAC00893053 /* Compass.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				67D8CCB02E7AB0E30086FD05 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				67AD8CA22E7DA33C00332EF0 /* XCRemoteSwiftPackageReference "vapor" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6751032F2E79EBAC00893053 /* Products */;
@@ -366,6 +370,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		67AD8CA22E7DA33C00332EF0 /* XCRemoteSwiftPackageReference "vapor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/vapor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.117.0;
+			};
+		};
 		67D8CCB02E7AB0E30086FD05 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
@@ -377,6 +389,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		67AD8CA32E7DA33C00332EF0 /* Vapor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67AD8CA22E7DA33C00332EF0 /* XCRemoteSwiftPackageReference "vapor" */;
+			productName = Vapor;
+		};
 		67D8CCB12E7AB0E30086FD05 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 67D8CCB02E7AB0E30086FD05 /* XCRemoteSwiftPackageReference "swift-algorithms" */;

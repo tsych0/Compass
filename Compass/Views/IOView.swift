@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-    
+
 struct IOView: View {
     var type: String
-    var text: String
+    @Binding var text: String
     
     var body: some View {
-        
         VStack {
             Text(type)
                 .font(.largeTitle)
@@ -20,11 +19,12 @@ struct IOView: View {
                 .padding([.top, .bottom], 5)
                 .frame(maxWidth: .infinity)
                 .glassEffect(.regular)
-
-            Text(text)
-                .font(.title2)
+            
+            TextEditor(text: $text)
+                .font(.title3)
                 .monospaced()
                 .padding(10)
+                .scrollContentBackground(.hidden)
                 .frame(
                     maxWidth: .infinity,
                     maxHeight: .infinity,
@@ -37,6 +37,9 @@ struct IOView: View {
 }
 
 #Preview {
-    IOView(type: "Input",
-           text: "9\n0 1 4\n1 2 3\n2 -1 -1\n3 -1 -1\n4 5 8\n5 6 7\n6 -1 -1\n7 -1 -1\n8 -1 -1").padding()
+    @Previewable @State var text = "9\n0 1 4\n1 2 3\n2 -1 -1\n3 -1 -1\n4 5 8\n5 6 7\n6 -1 -1\n7 -1 -1\n8 -1 -1"
+    IOView(
+        type: "Input",
+        text: $text
+    ).padding()
 }

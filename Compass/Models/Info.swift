@@ -6,18 +6,19 @@
 //
 
 import Foundation
+import Vapor
 
-struct Info: Codable  {
+struct Info: Content  {
     var name: String
     var group: String
     var url: String
     var interactive: Bool
-    var memory_limit: Int64
-    var time_limit: Int64
+    var memoryLimit: Int64
+    var timeLimit: Int64
     var tests: [Test]
 }
 
-struct Test: Codable {
+struct Test: Content {
     var input: String
     var output: String
 }
