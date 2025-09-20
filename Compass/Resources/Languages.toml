@@ -1,0 +1,301 @@
+[1]
+name = "Assembly (NASM)"
+compiler = "nasmld"
+compiler_args = ["-f", "elf64", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "asm"
+comment = ";"
+ 
+[2]
+name = "Assembly (clang)"
+compiler = "clang"
+compiler_args = ["-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "s"
+comment = "//"
+ 
+[3]
+name = "Ada"
+compiler = "gnatmake"
+compiler_args = ["-g", "-O2", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "ads"
+comment = "--"
+
+[4]
+name = "Bash"
+run_cmd = "bash"
+run_args = ["{mainfile}"]
+extension = "sh"
+comment = "#"
+
+[5]
+cf_id = 43
+name = "C (GCC)"
+compiler = "gcc"
+compiler_args = ["-fmax-errors=10", "-lm", "-Wall", "-O2", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "c"
+comment = "//"
+
+[6]
+cf_id = 91
+name = "C++ (GCC)"
+compiler = "g++"
+compiler_args = ["-fmax-errors=10", "-lm", "-Wall", "-O2", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "cpp"
+comment = "//"
+ 
+ 
+[7]
+cf_id = 43
+name = "C (Clang)"
+compiler = "clang"
+compiler_args = ["-fmax-errors=10", "-lm", "-Wall", "-O2", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "c"
+comment = "//"
+
+[8]
+cf_id = 89
+name = "C++ (Clang++)"
+compiler = "clang++"
+compiler_args = ["-fmax-errors=10", "-lm", "-Wall", "-O2", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "cpp"
+comment = "//"
+
+[9]
+name = "Clojure"
+run_cmd = "clojure"
+run_args = ["-M", "{mainfile}"]
+extension = "clj"
+comment = "//"
+
+[10]
+cf_id = 28
+name = "D (DMD)"
+compiler = "dmd"
+compiler_args = ["{mainfile}"]
+run_cmd = "./{executable}"
+extension = "d"
+comment = "//"
+
+[11]
+name = "Elixir"
+run_cmd = "elixir"
+run_args = ["{mainfile}"]
+extension = "exs"
+comment = "#"
+
+[12]
+name = "Erlang/OTP 27"
+run_cmd = "escript"
+run_args = ["{mainfile}"]
+extension = "erl"
+comment = "#"
+
+[13]
+name = "Fortran (Gfortran)"
+compiler = "gfortran"
+compiler_args = ["-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+extension = "f90"
+comment = "//"
+
+[14]
+name = "F#"
+extension = "fsx"
+run_cmd = "dotnet"
+run_args = ["fsi", "{mainfile}"]
+comment = "//"
+
+[15]
+cf_id = 32
+name = "Go"
+compiler = "go"
+compiler_args = ["build", "main.go"]
+run_cmd = "./{executable}"
+extension = "go"
+comment = "//"
+
+[16]
+name = "Groovy"
+extension = "groovy"
+compiler = "groovyc"
+compiler_args = ["script.groovy"]
+run_cmd = "groovy"
+run_args = ["script"]
+comment = "//"
+
+[17]
+cf_id = 12
+name = "Haskell (GHC)"
+extension = "hs"
+compiler = "ghc"
+compiler_args = ["main.hs"]
+run_cmd = "./{executable}"
+check_args = ["--version"]
+comment = "--"
+
+[18]
+cf_id = 87
+name = "Java"
+extension = "java"
+compiler = "javac"
+compiler_args = ["Main.java"]
+run_cmd = "java"
+run_args = ["Main"]
+check_args = ["--version"]
+comment = "//"
+
+[19]
+cf_id = 55
+name = "Javascript (Nodejs)"
+compiler = "node"
+compiler_args = ["-c", "{mainfile}"]
+run_cmd = "node"
+run_args = ["{mainfile}"]
+extension = "js"
+comment = "//"
+
+[20]
+cf_id = 99
+name = "Kotlin"
+compiler = "kotlinc"
+compiler_args = ["{mainfile}"]
+run_cmd = "kotlin"
+run_args = ["{executable}"]
+extension = "kt"
+comment = "//"
+
+[21]
+name = "Lua"
+extension = "lua"
+compiler = "lua"
+compiler_args = ["script.lua"]
+run_cmd = "lua"
+run_args = ["./luac.out"]
+comment = "--"
+
+[22]
+cf_id = 19
+name = "Ocaml"
+compiler = "ocamlc"
+compiler_args = ["{mainfile}"]
+run_cmd = "./{executable}"
+extension = "ml"
+comment = "(*)"
+
+[23]
+name = "Octave"
+run_cmd = "octave"
+run_args = ["'{mainfile}'"]
+extension = "m"
+comment = "//"
+
+[24]
+cf_id = 4
+name = "Pascal (FPC)"
+compiler = "fpc"
+compiler_args = ["{mainfile}"]
+run_cmd = "./{executable}"
+extension = "pas"
+comment = "//"
+
+[25]
+cf_id = 6
+name = "PHP"
+run_cmd = "php"
+run_args = ["{mainfile}"]
+extension = "php"
+comment = "//"
+
+[26]
+cf_id = 31
+name = "Python"
+compiler = "python3"
+compiler_args = ["-m", "py_compile", "{mainfile}"]
+run_cmd = "python3"
+run_args = ["{mainfile}"]
+extension = "py"
+comment = "#"
+ 
+[27]
+cf_id = 13
+name = "Perl"
+run_cmd = "perl"
+run_args = ["{mainfile}"]
+extension = "pl"
+comment = "//"
+
+[28]
+name = "R"
+run_cmd = "Rscript"
+run_args = ["{mainfile}"]
+extension = "r"
+comment = "//"
+
+[29]
+cf_id = 67
+name = "Ruby"
+compiler = "ruby"
+compiler_args = ["-c", "{mainfile}"]
+run_cmd = "ruby"
+run_args = ["{mainfile}"]
+extension = "rb"
+comment = "#"
+
+[30]
+cf_id = 98
+name = "Rust"
+extension = "rs"
+compiler = "rustc"
+compiler_args = ["-C", "opt-level=3", "-C", "target-cpu=native", "--crate-type", "bin", "--edition", "2024", "{mainfile}", "-o", "{executable}"]
+run_cmd = "./{executable}"
+check_args = ["-V"]
+comment = "//"
+
+[31]
+name = "Racket"
+compiler = "racket"
+compiler_args = ["-l", "raco", "exe", "-o", "{executable}", "{mainfile}"]
+run_cmd = "./{executable}"
+comment = ";"
+ 
+[32]
+cf_id = 20
+name = "Scala"
+compiler = "scalac"
+compiler_args = ["{mainfile}"]
+run_cmd = "scala"
+run_args = ["{executable}"]
+extension = "scala"
+comment = "//"
+
+
+[33]
+name = "SBCL"
+run_cmd = "sbcl"
+run_args = ["--script", "{mainfile}"]
+extension = "lisp"
+comment = ";"
+ 
+[34]
+name = "Swift"
+compiler = "swiftc"
+compiler_args = ["-o", "{executable}", "-static-stdlib", "-module-cache-path", ".cache", "-O", "{mainfile}"]
+run_cmd = "./{executable}"
+comment = "//"
+
+[35]
+name = "Typescript"
+compiler = "tsc"
+compiler_args = ["{mainfile}"]
+run_cmd = "node"
+run_args = ["{executable}.js"]
+extension = "ts"
+comment = "//"
+
+

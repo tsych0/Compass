@@ -58,17 +58,6 @@ class Verdicts {
     var count: Int { items.count }
 }
 
-
-extension EnvironmentValues {
-    @Entry var verdicts: Verdicts = Verdicts()
-}
-
-extension View {
-    func verdicts(_ verdicts: Verdicts) -> some View {
-        environment(\.verdicts, verdicts)
-    }
-}
-
 extension Verdict {
     var statusColor: Color {
         switch self.status_id {

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.problem) private var problem: Problem
+    @Environment(\.state) private var state: AppState
+
+    private var problem: Problem { state.problem }
 
     var body: some View {
         NavigationStack {
@@ -24,7 +26,6 @@ struct ContentView: View {
         }
     }
 }
-
 
 #Preview {
     var verdictList: [Verdict] = [
@@ -46,6 +47,15 @@ struct ContentView: View {
     ]
 
     ContentView()
-        .verdicts(Verdicts(verdictList))
-        .problem(Problem(title: "Sum of Subarrays", url: "", memory_limit: 0, time_limit: 0))
+        .state(
+            AppState(
+                problem: Problem(
+                    title: "Sum of Subarrays",
+                    url: "",
+                    memory_limit: 0,
+                    time_limit: 0
+                ),
+                verdicts: Verdicts(verdictList)
+            )
+        )
 }

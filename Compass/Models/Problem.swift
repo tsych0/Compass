@@ -27,13 +27,3 @@ public class Problem {
         self.time_limit = time_limit
     }
 }
-
-extension EnvironmentValues {
-    @Entry var problem: Problem = Problem()
-}
-
-extension View {
-    func problem(_ problem: Problem) -> some View {
-        environment(\.problem, problem)
-    }
-}

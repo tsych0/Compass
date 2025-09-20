@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CasesView: View {
     @Binding var selectedCase: Int
-    @Environment(\.verdicts) private var verdicts: Verdicts
+    @Environment(\.state) private var state: AppState
+
+    private var verdicts: Verdicts { state.verdicts }
     private var numCases: Int { verdicts.count }
 
     private var currentCaseLabel: String {
@@ -50,5 +52,7 @@ struct CasesView: View {
         Verdict(),
     ]
 
-    CasesView(selectedCase: $selectedCase).verdicts(Verdicts(verdictList))
+    CasesView(selectedCase: $selectedCase).state(
+        AppState(verdicts: Verdicts(verdictList))
+    )
 }

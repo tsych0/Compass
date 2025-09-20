@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment(\.verdicts) private var verdicts: Verdicts
-    @Environment(\.problem) private var problem: Problem
+    @Environment(\.state) private var state: AppState
+
+    private var problem: Problem { state.problem }
+    private var verdicts: Verdicts { state.verdicts }
 
     @State private var selectedCase: Int = 0
     @State private var newInput: String = ""
     @State private var newOutput: String = ""
-    
+
     var addingTestCase: Bool {
         selectedCase == verdicts.count
     }
@@ -64,7 +66,8 @@ struct HomeView: View {
                 )
                 IOView(
                     type: "Output",
-                    text: addingTestCase ? $newOutput : .constant(verdict.output)
+                    text: addingTestCase
+                        ? $newOutput : .constant(verdict.output)
                 )
                 IOView(type: "Answer", text: .constant(verdict.answer))
                 Spacer()
@@ -76,7 +79,17 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
-        .problem(Problem(title: "Two Sum", url: "", memory_limit: 0, time_limit: 0))
+        .state(
+            AppState(
+                problem:
+                    Problem(
+                        title: "Two Sum",
+                        url: "",
+                        memory_limit: 0,
+                        time_limit: 0
+                    )
+            )
+        )
         .padding()
         .frame(width: 900)
 }
